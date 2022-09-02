@@ -11,7 +11,7 @@ namespace WinFormsApp1
         {
             if(e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
-                if (this.Location.Y + 50 < Screen.PrimaryScreen.Bounds.Height)
+                if (this.Location.Y + 50 < Screen.PrimaryScreen.Bounds.Height - this.Height)
                 this.Location = new Point(this.Location.X, this.Location.Y + 50);
             }
             else if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
@@ -26,7 +26,7 @@ namespace WinFormsApp1
             }
             else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
             {
-                if (this.Location.X + 50 < Screen.PrimaryScreen.Bounds.Width)
+                if (this.Location.X + 50 < Screen.PrimaryScreen.Bounds.Width - this.Width)
                     this.Location = new Point(this.Location.X + 50, this.Location.Y);
             }
         }
